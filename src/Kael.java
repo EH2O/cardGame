@@ -18,50 +18,25 @@ public class Kael extends basicCard {
             "\n" +
             "Though Kael managed to escape, he knew that he had drawn too much attention to himself. He left the city that night, never to return again. From that day forward, Kael lived a life of solitude and anonymity, always on the move and never staying in one place for too long, always looking over his shoulder and watching for any signs of danger." + "(Written by Chatgpt)";
 
-    public int getDef() {
-        return def;
+    public String getBackStory() {
+        return BackStory;
     }
-
-    public void setDef(int def) {
-        this.def = def;
-    }
-
-    public int getHp() {
-        return hp;
-    }
-
-    public void setHp(int hp) {
-        this.hp = hp;
-    }
-
-    public int getMana() {
-        return mana;
-    }
-
-    public void setMana(int mana) {
-        this.mana = mana;
-    }
-    public int getSpeed() {
-        return speed;
-    }
-    int def = 50;
-    int hp = 80;
-    int mana = 100;
-    int speed = 120;
     String type = "Ro";
-    String choice;
+    String[] Weak = {"Wa", "Fi"};
 
-    ArrayList<String[]> Attacks = new ArrayList<String[]>();
-    String[] Name = {"Boulder throw"};
-    String[] Dmg = {"40RoS"};
-    public String attack (String CH) {
-        if (Integer.parseInt(String.valueOf(CH.charAt(0))) == 1){
-            choice = "40RoS:Boulder Throw";
-        }
-        return "x";
+
+    String[] Name = {"Boulder throw", "Test"};
+    String[] Dmg = {"4040RoS", "test"};
+
+    public Kael() {
+        setHp(100);
+        setDef(50);
+        setMana(100);
+        setSpeed(120);
+        addArrayNaDm(Name);
+        addArrayNaDm(Dmg);
+        setBackStory(Backstory);
+        setCardType(type);
+        AddWeak(Weak);
     }
-
-
-
-
 }
